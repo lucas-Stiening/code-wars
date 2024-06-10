@@ -67,3 +67,63 @@ let summation = function (num) {
     }
     return result
 }
+
+/* kata 8kyu: Very simple, given a number (integer / decimal / both depending on the language), find its opposite (additive inverse).
+Examples:
+1: -1
+14: -14
+-34: 34
+ */
+
+// my proposed solution :
+function opposite(number) {
+    let opp = number * - 1
+    return opp
+  }
+
+ /*  kata 8kyu:  You get an array of numbers, return the sum of all of the positives ones.
+
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+Note: if there is nothing to sum, the sum is default to 0. */
+
+
+// my proposed solution :
+function positiveSum(arr) {
+    let sum = 0
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i] > 0){
+        sum += arr[i]
+      }
+    }
+    return sum
+  }
+
+   /*  kata 8kyu: Write a function that removes the spaces from the string, then return the resultant string.
+
+Examples:
+
+Input -> Output
+"8 j 8   mBliB8g  imjB8B8  jl  B" -> "8j8mBliB8gimjB8B8jlB"
+"8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd" -> "88Bifk8hB8BB8BBBB888chl8BhBfd"
+"8aaaaa dddd r     " -> "8aaaaaddddr"
+*/
+
+
+// my proposed solution :
+function noSpace(x){
+return x.split(' ').join('')
+}
+
+   /* kata 8kyu: In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+*/
+
+
+// my proposed solution :
+function makeNegative(num) {
+    if(num > 0){
+      return num * -1
+    }else{
+      return num
+    }
+  }
