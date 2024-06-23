@@ -186,3 +186,14 @@ function nbYear(p0, percent, aug, p) {
   
   return years ;
 }
+
+/* kata 8kyu: We need a function that can transform a number (integer) into a string.
+
+What ways of achieving this do you know?
+*/
+
+
+// my proposed solution :
+function numberToString(num) {
+ return String(num)
+}
