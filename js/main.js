@@ -203,7 +203,7 @@ function numberToString(num) {
 
 
 function getMiddle(s)
-{
+{ 
   return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
 }
 */
@@ -223,3 +223,31 @@ function getMiddle(s){
     return s.slice(start, start + 2);
   }
 }
+/* kata 7kyu: Simple, given a string of words, return the length of the shortest word(s).
+
+String will never be empty and you do not need to account for different data types.
+*/
+
+
+// my proposed solution :
+function findShort(s){
+  let words = s.split(' ')
+  let shortest = words.reduce((shortestWord, currentWord) => {
+    return currentWord.length < shortestWord.length ? currentWord : shortestWord;
+  }, words[0]);
+  return shortest.length;
+
+}
+
+/* kata 8kyu: Complete the square sum function so that it squares each number passed into it and then sums the results together.
+*/
+
+// my proposed solution :
+
+
+function squareSum(numbers){
+  let sum = numbers.reduce((acc, cv) => {
+      return acc + (cv ** 2)
+    }, 0);
+    return sum;
+  }
